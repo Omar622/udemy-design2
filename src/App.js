@@ -1,12 +1,10 @@
 import './App.css';
-import Card from './components/Card.js'
+import TapPanel from './components/TapPanel';
 
 function App() {
   return (
     <div className="App">
-      <Card 
-      field="python" id="3">
-      </Card>
+      <TapPanel field="Web-Development"></TapPanel>
     </div>
   );
 }
