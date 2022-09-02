@@ -12,7 +12,7 @@ function TapPanel(props) {
     const getCardList = () => {
         const arr = [];
         data[props.field]["courses"].forEach(element => {
-            arr.push(<Card field={props.field} id={element["id"]}></Card>);
+            arr.push(<Card field={props.field} id={element["id"]} key={element["id"]}></Card>);
         });
         return arr;
     }

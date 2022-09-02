@@ -1,10 +1,10 @@
 import './App.css';
-import TapPanel from './components/js/TapPanel';
+import HomePage from './pages/HomePage';
 
 function App() {
   return (
     <div className="App">
-      <TapPanel field="Web-Development"></TapPanel>
+      <HomePage></HomePage>
     </div>
   );
 }
