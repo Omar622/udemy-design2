@@ -1,5 +1,5 @@
 import './App.css';
-import TapPanel from './components/TapPanel';
+import TapPanel from './components/js/TapPanel';
 
 function App() {
   return (

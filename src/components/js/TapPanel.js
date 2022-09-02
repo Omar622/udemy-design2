@@ -1,6 +1,7 @@
 import React from "react";
-import data from "../dummy_data.js"
+import data from "../../dummy_data.js"
 import Card from "./Card.js";
+import style from "../CSSModules/TapPanel.module.css"
 
 function TapPanel(props) {
     // props: field
@@ -16,17 +17,11 @@ function TapPanel(props) {
         return arr;
     }
 
-    return <div className="tap-panel">
-        <header>
-            <h3>{header}</h3>
-        </header>
-        <p>
-            {description}
-        </p>
-        <button className="lg-white-black-button">{btn_txt}</button>
-        <section className="courses-grid">
-            {getCardList()}
-        </section>
+    return <div className={style.tapPanel}>
+        <header><h3>{header}</h3></header>
+        <p>{description}</p>
+        <button className={style.lgWhiteBlackButton}>{btn_txt}</button>
+        <section className={style.coursesGrid}>{getCardList()}</section>
     </div>
 }
 
