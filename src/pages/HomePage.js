@@ -5,7 +5,7 @@ import NavBar from "../components/js/NavBar";
 function HomePage() {
     return <div>
         <NavBar></NavBar>
-        <TapPanel field="Web-Development"></TapPanel>
+        <TapPanel field="web_res"></TapPanel>
     </div>
 }
 
