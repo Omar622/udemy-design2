@@ -54,7 +54,7 @@ function NavBar() {
 
         {/* search button (displayed in phone view only) */}
         <button className={style.phoneView + " " + style.transparentButton + " " + style.navBarItem}>
-            <SearchRoundedIcon style={{font_size: "24px"}}/>
+            <SearchRoundedIcon style={{fontSize: "24px"}}/>
         </button>
 
         {/* shopping button */}

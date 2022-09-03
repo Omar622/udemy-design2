@@ -7,6 +7,7 @@ function TapPanel(props) {
     const [status, setStatus] = useState('idle');
     const [data, setData] = useState([]);
 
+    // run only once
     useEffect(() => {
         const fetchData = async () => {
             setStatus('fetching');
@@ -28,12 +29,18 @@ function TapPanel(props) {
         return arr;
     }
 
-    return <div className={style.tapPanel}>
-        <header><h3>{status === 'fetched' && data['HomePageCourses'][props.field]["header"]}</h3></header>
-        <p>{status === 'fetched' && data['HomePageCourses'][props.field]["description"]}</p>
-        <button className={style.lgWhiteBlackButton}>{status === 'fetched' && "Explore " + data['HomePageCourses'][props.field]['title']}</button>
-        <section className={style.coursesGrid}>{status === 'fetched' && getCardList()}</section>
-    </div>
+    return <>
+        <header>
+            <h1>A broad selection of courses</h1>
+            <span style={{fontSize: "24px"}}>Choose from 204,000 online video courses with new additions published every month</span>
+        </header>
+        <div className={style.tapPanel}>
+            <header><h3>{status === 'fetched' && data['HomePageCourses'][props.field]["header"]}</h3></header>
+            <p>{status === 'fetched' && data['HomePageCourses'][props.field]["description"]}</p>
+            <button className={style.lgWhiteBlackButton}>{status === 'fetched' && "Explore " + data['HomePageCourses'][props.field]['title']}</button>
+            <section className={style.coursesGrid}>{status === 'fetched' && getCardList()}</section>
+        </div>
+    </>
 }
 
 export default TapPanel;
