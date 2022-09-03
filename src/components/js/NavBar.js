@@ -1,14 +1,17 @@
 import React from "react";
 import style from "../CSSModules/NavBar.module.css"
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-// TODO: put icons
+import MenuRoundedIcon from '@mui/icons-material/MenuRounded'
+import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import LanguageOutlinedIcon from '@mui/icons-material/LanguageOutlined';
+
 function NavBar() {
     return <header className={style.navBar}>
+        
         {/* burger button */}
-        <button className={ style.transparentButton + " "+ style.navBarItem}>
-            {/* <i className="fa fa-bars" style={{font_size: "22px"}}></i> */}
-            {/* <FontAwesomeIcon icon="fa-thin fa-bars" style={{color:"black"}}/> */}
+        <button className={style.phoneView + " " + style.transparentButton + " "+ style.navBarItem}>
+            <MenuRoundedIcon />
         </button>
 
         {/* udemy icon */}
@@ -31,7 +34,7 @@ function NavBar() {
             placeholder="Search for anything" style={{padding: "0px 20px"}}>
             </input>
             <button className={style.pcView + " " + style.transparentButton} type={"submit"}>
-                {/* <i className="fa fa-search" style={{font_size: "24px"}}></i> */}
+                <SearchRoundedIcon />
             </button>
         </form>
 
@@ -50,13 +53,13 @@ function NavBar() {
         </nav>
 
         {/* search button (displayed in phone view only) */}
-        <button className={style.phoneView + style.transparentButton + " " + style.navBarItem}>
-            {/* <i className="fa fa-search" style={{font_size: "24px"}}></i> */}
+        <button className={style.phoneView + " " + style.transparentButton + " " + style.navBarItem}>
+            <SearchRoundedIcon style={{font_size: "24px"}}/>
         </button>
 
-        {/* shopping button (displayed in phone view only) */}
-        <button className={style.phoneView + " " + style.transparentButton + " " + style.navBarItem}>
-            {/* <i className="material-icons">shopping_cart</i> */}
+        {/* shopping button */}
+        <button className={style.transparentButton + " " + style.navBarItem}>
+            <ShoppingCartOutlinedIcon />
         </button>
 
         {/* log in button (displayed in pc or larger view only) */}
@@ -71,7 +74,7 @@ function NavBar() {
 
          {/* language button (displayed in pc view only)  */}
         <button className={style.pcView + " " + style.smWhiteBlackButton  + " " + style.navBarItem}>
-            {/* <i className="material-icons">language</i> */}
+            <LanguageOutlinedIcon />
         </button>
     </header>
 }
