@@ -27,7 +27,8 @@ function reFormatAuthors(instructors){
     instructors.forEach(element => {
         authors += element["title"] + ", ";
     });
-    return authors.slice(0, -2);
+    authors = authors.slice(0, -2);
+    return authors.length > 40 ? (authors.substring(0, 39) + "...") : authors;
 }
 function reFormatTitle(title){
     return title.length > 38 ? (title.substring(0, 37) + "...") : title;
