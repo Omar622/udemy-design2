@@ -17,7 +17,6 @@ function TapPanel(props) {
             setData(data);
             setStatus('fetched');
         }
-
         fetchData();
     }, []);
 
@@ -30,7 +29,7 @@ function TapPanel(props) {
     }
 
     return <>
-        <header>
+        <header style={{marginLeft: "24px"}}>
             <h1>A broad selection of courses</h1>
             <span style={{fontSize: "24px"}}>Choose from 204,000 online video courses with new additions published every month</span>
         </header>
