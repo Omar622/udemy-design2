@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import style from "../CSSModules/NavBar.module.css"
+import searchContext from "../../context/Search";
 
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded'
 import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
@@ -7,8 +8,17 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import LanguageOutlinedIcon from '@mui/icons-material/LanguageOutlined';
 
 function NavBar() {
+    // handle search input 
+    let searchWord = '';
+    const { setSearchWord } = useContext(searchContext);
+    const handleForm = (event) => {
+        event.preventDefault();
+        setSearchWord(searchWord);
+    }
+    const handleInput = (event) => searchWord = event.target.value
+    
+
     return <header className={style.navBar}>
-        
         {/* burger button */}
         <button className={style.phoneView + " " + style.transparentButton + " "+ style.navBarItem}>
             <MenuRoundedIcon />
@@ -29,9 +39,8 @@ function NavBar() {
         </nav>
 
         {/* search field (display in pc view only) */}
-        <form className={style.navBarInput + " " + style.navBarItem}>
-            <input className={style.pcView + " " + style.navBarInputText} type={"text"} name="search"
-            placeholder="Search for anything" style={{padding: "0px 20px"}}>
+        <form className={style.navBarInput + " " + style.navBarItem} onSubmit={handleForm}>
+            <input className={style.pcView + " " + style.navBarInputText} type={"text"} name="search" placeholder="Search for anything" style={{padding: "0px 20px"}} onChange={handleInput}>
             </input>
             <button className={style.pcView + " " + style.transparentButton} type={"submit"}>
                 <SearchRoundedIcon />

@@ -4,7 +4,8 @@ import style from "../CSSModules/TapPanel.module.css"
 import Spinner from './Spinner.js'
 
 function TapPanel(props) {
-    // props: field
+    // props: field, searchWord
+
     const [status, setStatus] = useState('idle');
     const [data, setData] = useState([]);
 
@@ -24,7 +25,9 @@ function TapPanel(props) {
     const getCardList = () => {
         const arr = [];
         data['HomePageCourses'][props.field]["items"].forEach(element => {
-            arr.push(<Card item={element} key={element["id"]}></Card>);
+            if(String(element["title"]).toLowerCase().includes(props.searchWord.toLowerCase())){
+                arr.push(<Card item={element} key={element["id"]}></Card>); 
+            }
         });
         return arr;
     }

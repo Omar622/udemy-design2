@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import NavBar from "../components/js/NavBar";
 import MainContentHomePage from "../components/js/MainContentHomePage";
-// import Spinner from "../components/js/Spinner";
+import searchContext from "../context/Search";
 
 function HomePage() {
-    return <div>
-        <NavBar></NavBar>
-        <MainContentHomePage></MainContentHomePage>
-    </div>
+    const [searchWord, setSearchWord] = useState('');
+    return <searchContext.Provider value={{searchWord, setSearchWord}}>
+        <div>
+            <NavBar></NavBar>
+            <MainContentHomePage searchWord={searchWord}></MainContentHomePage>
+        </div>
+    </searchContext.Provider>
 }
 
 export default HomePage;
