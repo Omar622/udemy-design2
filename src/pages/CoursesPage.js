@@ -1,5 +1,7 @@
 import React from "react";
 import NavBar from "../components/js/NavBar";
+import NavBar2 from "../components/js/NavBar2";
+
 // import { useLocation } from 'react-router-dom'
 
 function CoursesPage() {
@@ -10,6 +12,7 @@ function CoursesPage() {
 
     return <div>
         <NavBar />
+        <NavBar2 />
         
     </div>
 }

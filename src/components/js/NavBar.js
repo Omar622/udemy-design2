@@ -1,6 +1,5 @@
 import React from "react";
 import style from "../CSSModules/NavBar.module.css"
-// import { Link } from "react-router-dom";
 
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded'
 import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
