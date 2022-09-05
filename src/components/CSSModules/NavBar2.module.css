@@ -1,0 +1,9 @@
+.navBar2 {
+    padding: 8px 20px 0px 20px;
+    height: 72px;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    background-color: #1C1D1F;
+    z-index: -1;
+}

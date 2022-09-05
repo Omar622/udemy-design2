@@ -4,10 +4,10 @@ import style from "../CSSModules/Card.module.css"
 import { Link } from "react-router-dom";
 
 function Card(props) {
-    // props: item
-    const item = props.item;
+    // props: courseData, courseSectionsData, reviews
+    const item = props.courseData;
 
-    return <Link to="courses" state={{detailedData: props.detailedData, reviews: props.reviews}} style={{textDecoration: 'none', color: 'black'}}>
+    return <Link to="courses" state={{courseData: props.courseData, courseSectionsData: props.courseSectionsData, reviews: props.reviews}} style={{textDecoration: 'none', color: 'black'}}>
         <article className={style.coursesGridItem}>
             <img src={item["image_480x270"]} alt={item["context_info"]['label']['title']} height="150px" width="260px"></img>
             <header style={{padding_left: "12px"}}>

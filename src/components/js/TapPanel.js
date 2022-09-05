@@ -26,7 +26,7 @@ function TapPanel(props) {
         const arr = [];
         data['HomePageCourses'][props.field]["items"].forEach(element => {
             if(String(element["title"]).toLowerCase().includes(props.searchWord.toLowerCase())){
-                arr.push(<Card item={element} detailedData={data['CoursesData'][element["id"]]} reviews={data['Review'][element["id"]]} key={element["id"]} />); 
+                arr.push(<Card courseData={element} courseSectionsData={data['CoursesData'][element["id"]]} reviews={data['Review'][element["id"]]} key={element["id"]} />); 
             }
         });
         return arr;
