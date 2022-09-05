@@ -1,6 +1,7 @@
 .tapPanel {
     border: 1px solid #ebedf0;
     padding: 24px;
+    margin: 24px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -15,6 +16,7 @@
 }
 
 .coursesGrid {
+    margin-top: 32px;
     display: flex;
     justify-content: stretch;
     flex-wrap: wrap;

@@ -1,0 +1,17 @@
+@media only screen and (min-width: 1340px) {
+    .mainContent {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: auto;
+        width: 1340px;
+    }
+}
+@media only screen and (max-width: 1340px) {
+    .mainContent {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: auto;
+    }
+}
