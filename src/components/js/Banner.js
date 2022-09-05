@@ -11,7 +11,7 @@ function Banner() {
             <p style={{fontSize: "24px"}}>courses start at E€ 169.99. Get your new student offer before it expires.</p>
         </div>
         <div className={style.homePageBanner}>
-            <img className={style.homePageBannerImage} src={image} alt="offer"></img>
+            <img className={style.homePageBannerImage} src={image} alt="offer" />
         </div>
     </section>
 }

@@ -13,10 +13,9 @@ function Card(props) {
             <h3 style={{margin:"5px"}}>{reFormatTitle(item["title"])}</h3>
             <p className={style.couresGridItemDescription} style={{color:"#876f89"}}>{reFormatAuthors(item["visible_instructors"])}</p>
             <p style={{display: "inline", margin: "0px 5px 0px 5px", fontSize: "12px", color:"#ce810e"}}>{parseFloat(item["rating"]).toFixed(1)}</p>
-            <Rate rate={parseFloat(item["rating"]).toFixed(1)}></Rate>
+            <Rate rate={parseFloat(item["rating"]).toFixed(1)} />
             <p style={{display: "inline", fontSize: "12px", color: "#738abb"}}>({item["num_reviews"]})</p>
-            <h3 style={{margin: "0px 5px"}}>E€ {
-            genPrice()}</h3>
+            <h3 style={{margin: "0px 5px"}}>E€ {genPrice()}</h3>
         </header>
     </article>
 }

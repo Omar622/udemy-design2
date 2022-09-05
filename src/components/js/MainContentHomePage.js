@@ -3,11 +3,10 @@ import TapPanel from "./TapPanel.js";
 import Banner from "./Banner.js";
 import style from '../CSSModules/MainContentHomePage.module.css';
 
-function MainContentHomePage(props) {
-    // props: searchWord
+function MainContentHomePage() {
     return <div className={style.mainContent}>
-        <Banner></Banner>
-        <TapPanel field="python_res" searchWord={props.searchWord}></TapPanel>
+        <Banner />
+        <TapPanel field="python_res" searchWord={''} />
     </div>
 }
 

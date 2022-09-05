@@ -26,7 +26,7 @@ function TapPanel(props) {
         const arr = [];
         data['HomePageCourses'][props.field]["items"].forEach(element => {
             if(String(element["title"]).toLowerCase().includes(props.searchWord.toLowerCase())){
-                arr.push(<Card item={element} key={element["id"]}></Card>); 
+                arr.push(<Card item={element} key={element["id"]} />); 
             }
         });
         return arr;
@@ -36,12 +36,12 @@ function TapPanel(props) {
         if(status === 'fetched') {
             return <div className={style.tapPanel}>
                 <header><h2>{status === 'fetched' && data['HomePageCourses'][props.field]["header"]}</h2></header>
-                <p style={{margin: "0px 250px 16px 0px"}}>{status === 'fetched' && data['HomePageCourses'][props.field]["description"]}</p>
-                <button className={style.lgWhiteBlackButton}>{status === 'fetched' && "Explore " + data['HomePageCourses'][props.field]['title']}</button>
-                <section className={style.coursesGrid}>{status === 'fetched' && getCardList()}</section>
+                <p style={{margin: "0px 250px 16px 0px"}}>{data['HomePageCourses'][props.field]["description"]}</p>
+                <button className={style.lgWhiteBlackButton}>{"Explore " + data['HomePageCourses'][props.field]['title']}</button>
+                <section className={style.coursesGrid}>{getCardList()}</section>
             </div>
         }else {
-            return <Spinner></Spinner>
+            return <Spinner />
         }
     }
 
@@ -51,7 +51,7 @@ function TapPanel(props) {
             <h1>A broad selection of courses</h1>
             <span style={{fontSize: "24px"}}>Choose from 204,000 online video courses with new additions published every month</span>
         </header>
-        <br></br>
+        <br />
         {ReloadData()}
     </>
 }

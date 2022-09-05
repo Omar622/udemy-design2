@@ -1,6 +1,6 @@
-import React, { useContext } from "react";
+import React from "react";
 import style from "../CSSModules/NavBar.module.css"
-import searchContext from "../../context/Search";
+// import { Link } from "react-router-dom";
 
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded'
 import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
@@ -8,16 +8,13 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import LanguageOutlinedIcon from '@mui/icons-material/LanguageOutlined';
 
 function NavBar() {
-    // handle search input 
     let searchWord = '';
-    const { setSearchWord } = useContext(searchContext);
-    const handleForm = (event) => {
+    const handleInputChanged = (event) => searchWord = event.target.value;
+    const handleFormSubmitted = (event) => {
         event.preventDefault();
-        setSearchWord(searchWord);
+        window.location.href = '/search?search=' + searchWord; 
     }
-    const handleInput = (event) => searchWord = event.target.value
     
-
     return <header className={style.navBar}>
         {/* burger button */}
         <button className={style.phoneView + " " + style.transparentButton + " "+ style.navBarItem}>
@@ -28,7 +25,7 @@ function NavBar() {
         <a className={style.navBarItem} href="/">
             <img
             src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg"
-            alt="udemy" width="91" height="34"></img>
+            alt="udemy" width="91" height="34" />
         </a>
 
         {/* Categories button */}
@@ -39,9 +36,8 @@ function NavBar() {
         </nav>
 
         {/* search field (display in pc view only) */}
-        <form className={style.navBarInput + " " + style.navBarItem} onSubmit={handleForm}>
-            <input className={style.pcView + " " + style.navBarInputText} type={"text"} name="search" placeholder="Search for anything" style={{padding: "0px 20px"}} onChange={handleInput}>
-            </input>
+        <form className={style.navBarInput + " " + style.navBarItem} onSubmit={handleFormSubmitted}>
+            <input className={style.pcView + " " + style.navBarInputText} type={"text"} name="search" placeholder="Search for anything" style={{padding: "0px 20px"}} onChange={handleInputChanged}/>
             <button className={style.pcView + " " + style.transparentButton} type={"submit"}>
                 <SearchRoundedIcon />
             </button>
