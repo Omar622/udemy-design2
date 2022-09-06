@@ -1,9 +1,80 @@
-.navBar2 {
-    padding: 8px 20px 0px 20px;
-    height: 72px;
-    position: fixed;
-    width: 100%;
-    top: 0px;
-    background-color: #1C1D1F;
-    z-index: -1;
+/* pc view */
+@media only screen and (min-width: 1080px) {
+    .navBar2 {
+        padding: 8px 20px 0px 20px;
+        height: 78px;
+        position: fixed;
+        width: 100%;
+        top: 0px;
+        background-color: #1C1D1F;
+        z-index: -1;
+        display: flex;
+    }
+    .buyNowBtn {
+        display: none;
+    }
+    .price {
+        display: none;
+    }
+}
+
+/* small-3 mode */
+@media only screen and (max-width: 1080px) {
+    .navBar2 {
+        padding: 8px 20px 0px 20px;
+        height: 78px;
+        position: fixed;
+        width: 100%;
+        bottom: 0px;
+        background-color: #1C1D1F;
+        z-index: -1;
+        display: flex;
+    }
+    .buyNowBtn {
+        border: 1px solid black;
+        background-color: white;
+        height: 50px;
+        width: 85px;
+        font-weight: 600;
+    }
+    .price {
+        margin: 10px 5px;
+        font-size: 20px;
+        color: white;
+        display: inline;
+    }
+}
+
+
+/* phone view */
+@media only screen and (max-width: 780px) {
+    .navBar2 {
+        border-top: 1px solid #E3E3E3;
+        padding: 8px 20px 0px 20px;
+        height: 78px;
+        position: fixed;
+        width: 100%;
+        bottom: 0px;
+        background-color: white;
+        z-index: -1;
+        display: flex;
+    }
+    .details {
+        display: none;
+    }
+    .buyNowBtn {
+        background-color: #1C1D1F;
+        height: 50px;
+        width: 100%;
+        font-weight: 600;
+    }
+    .buyNowTxt {
+        color: white;
+    }
+    .price {
+        margin: 10px 5px;
+        font-size: 20px;
+        color: black;
+        display: inline;
+    }
 }

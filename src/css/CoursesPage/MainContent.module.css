@@ -1,0 +1,7 @@
+.mainContent {
+    margin: 5% 20%;
+    border: 1px solid black;
+    height: 1000px;
+    position: relative;
+    z-index: -3;
+}
