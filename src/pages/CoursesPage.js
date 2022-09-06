@@ -1,13 +1,14 @@
 import React from "react";
-import NavBar from "../components/js/NavBar";
-import NavBar2 from "../components/js/NavBar2";
+
+import NavBar2 from "../components/CoursesPage/NavBar2";
+import NavBar from "../components/NavBar";
 
 import { useLocation } from 'react-router-dom'
 
 function CoursesPage() {
     const location = useLocation();
-    const { courseSectionsData } = location.state;
-    const { reviews } = location.state;
+    // const { courseSectionsData } = location.state;
+    // const { reviews } = location.state;
     const { courseData } = location.state;
     // Data of course is in courseData, courseSectionsData, reviews
     

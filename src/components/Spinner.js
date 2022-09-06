@@ -1,5 +1,5 @@
 import React from 'react';
-import style from '../CSSModules/Spinner.module.css';
+import style from '../css/Spinner.module.css'
 
 function Spinner() {
     return <div className={style.spinner} />
