@@ -2,10 +2,9 @@
 /* pc mode */
 @media only screen and (min-width: 1080px) {
     .mainContent {
-        margin: 5%;
+        margin: 0% 5% 5% 15%;
         padding: 2%;
         width: 700px;
-        height: 1000px;
     }
 }
 
@@ -14,6 +13,5 @@
     .mainContent {
         margin: 5% 15%;
         padding: 2%;
-        height: 1000px;
     }
 }

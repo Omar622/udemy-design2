@@ -16,7 +16,7 @@ function CourseContent(props) {
         <span> • </span>
         <p style={{color: "#909091", display: "inline"}}>{numberOfLectures} lectures</p>
         <span> • </span>
-        <p style={{color: "#909091", display: "inline"}}>{parseInt(estimatedTime.substr(0, 2))}h {parseInt(estimatedTime.substr(3, 2))}m total length</p>
+        <p style={{color: "#909091", display: "inline"}}>{reFormatTime(estimatedTime)[0]}h {reFormatTime(estimatedTime)[1]}m total length</p>
         <Accordion defaultActiveKey={['0']} alwaysOpen>
             {
                 sections.map((val, key) => 

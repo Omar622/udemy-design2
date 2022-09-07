@@ -1,7 +1,7 @@
 /* pc view */
 @media only screen and (min-width: 1080px) {
     .navBar2 {
-        padding: 8px 20px 0px 20px;
+        padding: 8px 20px 0px 15px;
         height: 78px;
         position: fixed;
         width: 100%;

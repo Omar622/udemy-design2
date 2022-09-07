@@ -5,7 +5,7 @@ function ObjectivesBox(props) {
     const { objectives } = props;
     return <div className={style.objectivesBox}>
         <h3 style={{fontWeight: "bold"}}>What you'll learn</h3>
-        <ul className={style.grid}>
+        <ul className={style.grid + " " + style.tikSign}>
             {
                 objectives.map((value, key) => <li>
                     <span style={{width: "80%", fontSize: "15px"}} key={key}>{value}</span>

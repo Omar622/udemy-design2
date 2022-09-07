@@ -8,11 +8,11 @@
     grid-template-columns: auto auto;
 }
 
-ul {
+.tikSign {
     list-style: none;
 }
   
-ul li:before {
+.tikSign li:before {
     content: '✓';
     padding-right: 5px;
 }

@@ -4,6 +4,7 @@ import style from "../../css/CoursesPage/MainContent.module.css";
 import ObjectivesBox from "./ObjectivesBox";
 import CourseContent from "./CourseContent";
 import Spinner from '../Spinner';
+import CourseDetails from "./CourseDetails";
 
 function MainContent(props) {
     const { id, field } = props;
@@ -18,11 +19,16 @@ function MainContent(props) {
                         <ObjectivesBox objectives={courseData['objectives_summary']}/>
                         <br />
                         <CourseContent 
-                        estimatedTime={courseData2['curriculum_context']['data']['estimated_content_length_text']}
+                        estimatedTime={courseData2['curriculum_context']['data']['estimated_content_length_in_seconds']}
                         numberOfLectures={courseData2['curriculum_context']['data']['num_of_published_lectures']}
                         sections={courseData2['curriculum_context']['data']['sections']}
                         />
-
+                        <CourseDetails 
+                        requirements={courseData2['details']['Requirements']} 
+                        description={courseData2['details']['description']} 
+                        for_who={courseData2['details']['for_who']}
+                        instructors={courseData['visible_instructors']}
+                        />
                     </>
                 }else {
                     return <Spinner />
