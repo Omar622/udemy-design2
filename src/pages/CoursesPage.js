@@ -11,8 +11,7 @@ import { UserConsumer } from '../contexts/userContext';
 
 function CoursesPage() {
     const location = useLocation();
-    const { id } = location.state;
-    const { field } = location.state;
+    const { id, field } = location.state;
     
     return <>
         <NavBar />
@@ -32,7 +31,7 @@ function CoursesPage() {
             }
         }
         </UserConsumer>
-        <MainContent />
+        <MainContent id={id} field={field}/>
     </>
     
 

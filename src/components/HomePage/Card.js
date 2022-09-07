@@ -22,7 +22,7 @@ function Card(props) {
             {
                 value => {
                     const courseData = value.data['HomePageCourses'][field]['items'].find((item) => item['id'] === id);
-                    return <Link to="courses" state={{id: id, field: field}} style={{textDecoration: 'none', color: 'black'}}>
+                    return <Link to="/courses" state={{id: id, field: field}} style={{textDecoration: 'none', color: 'black'}}>
                         <article className={style.coursesGridItem}>
                             <img src={courseData["image_480x270"]} alt={courseData["context_info"]['label']['title']} height="150px" width="260px"></img>
                             <header style={{padding_left: "12px"}}>

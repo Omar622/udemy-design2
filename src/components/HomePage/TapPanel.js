@@ -5,7 +5,7 @@ import Spinner from '../Spinner.js'
 import { UserConsumer } from '../../contexts/userContext.js';
 
 function TapPanel(props) {
-    const {field, searchWord} = props;
+    const { field, searchWord } = props;
     
     return <>
         <header style={{marginLeft: "24px"}}>
@@ -23,12 +23,12 @@ function TapPanel(props) {
                             <button className={style.lgWhiteBlackButton}>{"Explore " + value.data['HomePageCourses'][field]['title']}</button>
                             <section className={style.coursesGrid}>
                                 {
-                                value.data['HomePageCourses'][field]["items"].map((element) => {
-                                    if(String(element["title"]).toLowerCase().includes(searchWord.toLowerCase()))
-                                        return <Card field={field} id={element["id"]} key={element["id"]} />
-                                    else
-                                        return <></>
-                                })
+                                    value.data['HomePageCourses'][field]["items"].map((element) => {
+                                        if(String(element["title"]).toLowerCase().includes(searchWord.toLowerCase()))
+                                            return <Card field={field} id={element["id"]} key={element["id"]} />
+                                        else
+                                            return <></>
+                                    })
                                 }
                             </section>
                         </div>
