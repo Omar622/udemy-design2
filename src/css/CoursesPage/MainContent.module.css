@@ -1,7 +1,19 @@
-.mainContent {
-    margin: 5% 20%;
-    border: 1px solid black;
-    height: 1000px;
-    position: relative;
-    z-index: -3;
+
+/* pc mode */
+@media only screen and (min-width: 1080px) {
+    .mainContent {
+        margin: 5%;
+        padding: 2%;
+        width: 700px;
+        height: 1000px;
+    }
+}
+
+/* small-3 and phone mode */
+@media only screen and (max-width: 1080px) {
+    .mainContent {
+        margin: 5% 15%;
+        padding: 2%;
+        height: 1000px;
+    }
 }

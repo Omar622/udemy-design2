@@ -1,0 +1,18 @@
+.objectivesBox {
+    border: 1px solid #D1D7DC;
+    padding: 4%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+ul {
+    list-style: none;
+}
+  
+ul li:before {
+    content: '✓';
+    padding-right: 5px;
+}

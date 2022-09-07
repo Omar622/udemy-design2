@@ -5,21 +5,26 @@
     justify-content: space-around;
     align-items: center;
     background-color: white;
+    position: relative;
+    z-index: 5;
 }
 
 .navBar::before {
     content: "";
     background: linear-gradient(0deg, #e3e3e3, #f7f7f7, #fefefe);
     position: absolute;
-    height: 73px;
+    top: 72px;
+    height: 2px;
     width: 100%;
-    z-index: -2;
+    z-index: 4;
     filter: blur(10px);
 }
 
 .navBarItem {
     margin: 0px 8px;
     padding: 8px 0px;
+    position: relative;
+    z-index: 5;
 }
 
 
