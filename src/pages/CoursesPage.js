@@ -4,23 +4,38 @@ import NavBar2 from "../components/CoursesPage/NavBar2";
 import NavBar from "../components/NavBar";
 import MainContent from "../components/CoursesPage/MainContent";
 import TopContainer from "../components/CoursesPage/TopContainer";
+import Spinner from "../components/Spinner";
 
-import { useLocation } from 'react-router-dom'
+import { useLocation } from 'react-router-dom';
+import { UserConsumer } from '../contexts/userContext';
 
 function CoursesPage() {
     const location = useLocation();
-    const { courseSectionsData } = location.state;
-    const { reviews } = location.state;
-    const { courseData } = location.state;
-    // Data of course is in courseData, courseSectionsData, reviews
+    const { id } = location.state;
+    const { field } = location.state;
     
-    return <div>
+    return <>
         <NavBar />
-        <NavBar2 title={courseData['title']} rate={parseFloat(courseData['rating']).toFixed(1)} num_reviews={courseData['num_reviews']} students={courseData['num_subscribers']} price={1000 + Math.floor(Math.random() * 1000)}/>
-        <TopContainer title={courseData['title']} headline={courseData['headline']} rating={courseData['rating']}
-        num_reviews={courseData['num_reviews']} num_subscribers={courseData['num_subscribers']} instructors={courseData['visible_instructors']} last_update_date={courseData['last_update_date']}/>
-        <MainContent courseData={courseData} courseSectionsData={courseSectionsData} reviews={reviews}/>
-    </div>
+        <UserConsumer>
+        {
+            value => {
+                if(value.status === 'fetched') {
+                    const courseData = value.data['HomePageCourses'][field]['items'].find((item) => item['id'] === id);
+                    return <>
+                        <NavBar2 title={courseData['title']} rate={parseFloat(courseData['rating']).toFixed(1)} num_reviews={courseData['num_reviews']} students={courseData['num_subscribers']} price={1000 + Math.floor(Math.random() * 1000)}/>
+                        <TopContainer title={courseData['title']} headline={courseData['headline']} rating={courseData['rating']}
+                        num_reviews={courseData['num_reviews']} num_subscribers={courseData['num_subscribers']} instructors={courseData['visible_instructors']} last_update_date={courseData['last_update_date']}/>
+                    </>
+                }else {
+                    return <Spinner />
+                }
+            }
+        }
+        </UserConsumer>
+        <MainContent />
+    </>
+    
+
 }
 
 export default CoursesPage;
