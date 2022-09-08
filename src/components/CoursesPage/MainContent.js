@@ -5,6 +5,7 @@ import ObjectivesBox from "./ObjectivesBox";
 import CourseContent from "./CourseContent";
 import Spinner from '../Spinner';
 import CourseDetails from "./CourseDetails";
+import FeedBack from "./Feedback";
 
 function MainContent(props) {
     const { id, field } = props;
@@ -29,6 +30,9 @@ function MainContent(props) {
                         for_who={courseData2['details']['for_who']}
                         instructors={courseData['visible_instructors']}
                         />
+                        <br />
+                        <FeedBack rate={parseFloat(courseData["rating"]).toFixed(1)}/>
+                        <br />
                     </>
                 }else {
                     return <Spinner />

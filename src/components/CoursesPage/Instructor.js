@@ -6,13 +6,13 @@ function Instructor(props) {
         {
             instructors.map((val) => 
             <> 
-                <h3 style={{color: '#5624D0', textDecoration: 'underline', fontSize: "18px"}}>{val['name']}</h3>
+                <h3 style={{color: '#5624D0', textDecoration: 'underline', fontSize: "18px"}}>{val['display_name']}</h3>
                 <p style={{color: "#6B7074", fontSize: "14px"}}>{val['job_title']}</p>
                 <div style={{display: "flex"}}>
                     <img src={val['image_100x100']} className="rounded-circle" style={{width: "112px"}} alt="Avatar" />
                     <div style={{width: "12px"}}></div>
                     <div className="row">
-                        {/* dummy data */}
+                        {/* hard coded data */}
                         <span>★ 4.5 Instructor Rating</span>
                         <span>★ 71,958 Reviews</span>
                         <span>★ 317,097 Students</span>
@@ -20,7 +20,7 @@ function Instructor(props) {
                     </div>
                 </div>
                 <br />
-                {/* dummy data */}
+                {/* hard coded data */}
                 <p>
                     Winner of the AI "<strong>Cyber Security Educator of the Year 2020</strong>" award.<br />
                     Shortlisted for "<strong>Cyber Security Influence of the year 2021</strong>"<br />
