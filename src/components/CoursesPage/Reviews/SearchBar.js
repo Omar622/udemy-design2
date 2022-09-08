@@ -12,7 +12,7 @@ function SearchBar() {
                 <SearchRoundedIcon style={{color: "white"}}/>
             </button>
         </form>
-        <FormControl sx={{ m: 0, minWidth: 120, marginLeft: 4}}>
+        <FormControl sx={{ m: 0, minWidth: 120, marginLeft: 4, height: "40px"}}>
             <Select
             value={1}
             displayEmpty

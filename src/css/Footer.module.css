@@ -1,0 +1,50 @@
+.footer {
+    height: 590px;
+    width: 100%;
+    background-color: #1C1D1F;
+}
+
+@media only screen and (min-width: 700px) {
+    .footerMain {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        max-width: 900px;
+        margin: 15px;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .footerMain {
+        margin: 15px;
+    }
+    .footer {
+        height: 810px;
+        width: 100%;
+        background-color: #1C1D1F;
+    }
+}
+
+.topCompanies {
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.item {
+    color: white;
+    font-size: 15px;
+    margin: 4px;
+}
+
+.logoAndCopyRight {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+}
+
+@media only screen and (max-width: 1032px) {
+    .topCompanies {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+}

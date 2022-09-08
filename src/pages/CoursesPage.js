@@ -5,6 +5,7 @@ import NavBar from "../components/NavBar";
 import MainContent from "../components/CoursesPage/MainContent";
 import TopContainer from "../components/CoursesPage/TopContainer";
 import Spinner from "../components/Spinner";
+import Footer from "../components/Footer";
 
 import { useLocation } from 'react-router-dom';
 import { UserConsumer } from '../contexts/userContext';
@@ -32,6 +33,7 @@ function CoursesPage() {
         }
         </UserConsumer>
         <MainContent id={id} field={field}/>
+        <Footer />
     </>
     
 
