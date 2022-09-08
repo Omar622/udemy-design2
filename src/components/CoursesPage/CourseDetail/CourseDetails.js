@@ -1,6 +1,5 @@
 import React from "react";
-import Instructor
- from "./Instructor";
+import Instructor from "./Instructor";
 function CourseDetails(props) {
     const {requirements, description, for_who, instructors } = props;
     const for_who_list = String(for_who).split("\n");

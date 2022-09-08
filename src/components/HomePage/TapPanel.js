@@ -25,7 +25,7 @@ function TapPanel(props) {
                                 {
                                     value.data['HomePageCourses'][field]["items"].map((element) => {
                                         if(String(element["title"]).toLowerCase().includes(searchWord.toLowerCase()))
-                                            return <Card field={field} id={element["id"]} key={element["id"]} />
+                                                return <Card field={field} id={element["id"]} key={element["id"]} />
                                         else
                                             return <></>
                                     })

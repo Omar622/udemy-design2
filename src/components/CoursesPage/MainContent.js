@@ -4,8 +4,9 @@ import style from "../../css/CoursesPage/MainContent.module.css";
 import ObjectivesBox from "./ObjectivesBox";
 import CourseContent from "./CourseContent";
 import Spinner from '../Spinner';
-import CourseDetails from "./CourseDetails";
-import FeedBack from "./Feedback";
+import CourseDetails from "./CourseDetail/CourseDetails";
+import FeedBack from "./FeedBack/Feedback";
+import Reviews from "./Reviews/Reviews";
 
 function MainContent(props) {
     const { id, field } = props;
@@ -16,6 +17,7 @@ function MainContent(props) {
                 if(value.status === 'fetched') {
                     const courseData = value.data['HomePageCourses'][field]['items'].find((item) => item['id'] === id);
                     const courseData2 = value.data['CoursesData'][id];
+                    const reviews = value.data['Review'][id];
                     return <>
                         <ObjectivesBox objectives={courseData['objectives_summary']}/>
                         <br />
@@ -32,6 +34,8 @@ function MainContent(props) {
                         />
                         <br />
                         <FeedBack rate={parseFloat(courseData["rating"]).toFixed(1)}/>
+                        <br />
+                        <Reviews reviews={reviews}/>
                         <br />
                     </>
                 }else {
