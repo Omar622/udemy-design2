@@ -1,0 +1,36 @@
+.container {
+    background-color: white;
+    height: 880px;
+    width: 340px;
+    position: fixed;
+    z-index: 5;
+    top: 100px;
+    left: 65%;
+}
+
+.addCartBtn {
+    height: 48px;
+    width: 100%;
+    border: none;
+    color: white;
+    font-weight: bold;
+    background-color: #a435f0;
+    margin: 10px 0px;
+}
+
+.buyNow {
+    height: 48px;
+    width: 100%;
+    border: 1px solid black;
+    color: black;
+    font-weight: 700;
+    background-color: white;
+    margin: 10px 0px;
+}
+
+/* small-3 mode */
+@media only screen and (max-width: 1080px) {
+    .container {
+        display: none;
+    }
+}

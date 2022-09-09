@@ -6,6 +6,7 @@ import MainContent from "../components/CoursesPage/MainContent";
 import TopContainer from "../components/CoursesPage/TopContainer";
 import Spinner from "../components/Spinner";
 import Footer from "../components/Footer";
+import SideBarContainer from "../components/CoursesPage/SideBarContainer";
 
 import { useLocation } from 'react-router-dom';
 import { UserConsumer } from '../contexts/userContext';
@@ -13,7 +14,8 @@ import { UserConsumer } from '../contexts/userContext';
 function CoursesPage() {
     const location = useLocation();
     const { id, field } = location.state;
-    
+    const dummy_price = 200 + Math.floor(Math.random() * 100);
+
     return <>
         <NavBar />
         <UserConsumer>
@@ -21,11 +23,14 @@ function CoursesPage() {
             value => {
                 if(value.status === 'fetched') {
                     const courseData = value.data['HomePageCourses'][field]['items'].find((item) => item['id'] === id);
+                    const time = value.data['CoursesData'][id]['curriculum_context']['data']['estimated_content_length_in_seconds'];
                     return <>
-                        <NavBar2 title={courseData['title']} rate={parseFloat(courseData['rating']).toFixed(1)} num_reviews={courseData['num_reviews']} students={courseData['num_subscribers']} price={1000 + Math.floor(Math.random() * 1000)}/>
+                        <SideBarContainer image={courseData['image_750x422']} time={time} price={dummy_price}/>
+
+                        <NavBar2 title={courseData['title']} rate={parseFloat(courseData['rating']).toFixed(1)} num_reviews={courseData['num_reviews']} students={courseData['num_subscribers']} price={dummy_price}/>
 
                         <TopContainer title={courseData['title']} headline={courseData['headline']} rating={courseData['rating']}
-                        num_reviews={courseData['num_reviews']} num_subscribers={courseData['num_subscribers']} instructors={courseData['visible_instructors']} last_update_date={courseData['last_update_date']} image={courseData['image_750x422']}/>
+                        num_reviews={courseData['num_reviews']} num_subscribers={courseData['num_subscribers']} instructors={courseData['visible_instructors']} last_update_date={courseData['last_update_date']} image={courseData['image_750x422']} price={dummy_price}/>
                     </>
                 }else {
                     return <Spinner />
@@ -36,8 +41,6 @@ function CoursesPage() {
         <MainContent id={id} field={field}/>
         <Footer />
     </>
-    
-
 }
 
 export default CoursesPage;

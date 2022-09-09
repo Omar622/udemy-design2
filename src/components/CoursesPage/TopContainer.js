@@ -7,9 +7,8 @@ import LanguageIcon from '@mui/icons-material/Language';
 import ClosedCaptionIcon from '@mui/icons-material/ClosedCaption';
 
 function TopContainer(props) {
-    const {title, headline, rating, num_reviews, num_subscribers, instructors, last_update_date, image } = props;
+    const {title, headline, rating, num_reviews, num_subscribers, instructors, last_update_date, image, price } = props;
     
-    const genPrice = () => 1000 + Math.floor(Math.random() * 1000);
     const reFormatAuthors = (instructors) => {
         let authors = "";
         instructors.forEach(element => authors += element["title"] + ", ");
@@ -34,7 +33,7 @@ function TopContainer(props) {
                 <span style={{color: 'white'}}><LanguageIcon style={{width: "18px"}}/> English</span>
                 <span style={{color: 'white'}}><ClosedCaptionIcon style={{width: "18px"}}/> English</span>
             </div>
-            <h3 className={style.price}>E£{genPrice()}</h3>
+            <h3 className={style.price}>E£{price}</h3>
             <button className={style.addCartBtn}>Add to Cart</button>
             <div className={style.purchase}>
                 <div style={{margin: "10px", textAlign: "center"}}>
