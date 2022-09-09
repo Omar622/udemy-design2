@@ -42,9 +42,9 @@ function TopContainer(props) {
                     <p style={{color: 'white', fontSize: '13px', fontWeight: "600"}}>Full Lifetime Access</p>
                 </div>
                 <div style={{display: "flex", justifyContent: "space-between"}}>
-                    <a href="" style={{color: "white", fontWeight: "bold"}}>Share</a>
-                    <a href="" style={{color: "white", fontWeight: "bold"}}>Gift this course</a>
-                    <a href="" style={{color: "white", fontWeight: "bold"}}>Apply Coupon</a>
+                    <a href="/" style={{color: "white", fontWeight: "bold"}}>Share</a>
+                    <a href="/" style={{color: "white", fontWeight: "bold"}}>Gift this course</a>
+                    <a href="/" style={{color: "white", fontWeight: "bold"}}>Apply Coupon</a>
                 </div>
             </div>
         </div>

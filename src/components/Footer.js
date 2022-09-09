@@ -23,7 +23,7 @@ function Footer() {
         <ul className={style.footerMain} style={{listStyle: "none"}}>
             {
                     item.map((val) => 
-                    <li className={style.item}>{val}</li>)
+                    <li className={style.item}><a href="/" style={{color: "white", textDecoration: "none"}}>{val}</a></li>)
             }
         </ul>
         <br />

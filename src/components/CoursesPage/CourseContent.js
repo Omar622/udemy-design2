@@ -1,5 +1,6 @@
 import React from "react";
 import Accordion from 'react-bootstrap/Accordion';
+import PlayCircleFilledIcon from '@mui/icons-material/PlayCircleFilled';
 
 function CourseContent(props) {
     const { estimatedTime, numberOfLectures, sections } = props;
@@ -37,7 +38,7 @@ function CourseContent(props) {
                             {
                                 val['items'].map((item) => 
                                     <div style={{display: "flex", justifyContent: "space-between", width: "100%"}}>
-                                        <h5 style={{fontSize: "14px", color: "#7A7B7C"}}>{item['title']}</h5>
+                                        <h5 style={{fontSize: "14px", color: "#7A7B7C"}}><PlayCircleFilledIcon style={{color: 'black', width: '15px'}}/> {item['title']}</h5>
                                         <div style={{display: "flex", justifyContent: "space-between", width: "20%"}}>
                                             <p style={{display: "inline", color: '#5624D0', textDecoration: 'underline', fontSize: "14px"}}>{item['can_be_previewed'] === true ? 'Preview' : ''}</p>
                                             <p style={{display: "inline", color: "#7A7E82", fontSize: "14px"}}>{item['content_summary']}</p>

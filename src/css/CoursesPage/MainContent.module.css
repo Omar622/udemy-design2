@@ -2,16 +2,22 @@
 /* pc mode */
 @media only screen and (min-width: 1080px) {
     .mainContent {
-        margin: 0% 5% 5% 15%;
-        padding: 2%;
+        width: 100%;
+        height: 100%;
+        padding-right: 35%;
+    }
+    .wraper {
+        margin: auto;
         width: 700px;
+        padding: 30px 5%;
     }
 }
 
+
 /* small-3 and phone mode */
 @media only screen and (max-width: 1080px) {
-    .mainContent {
-        margin: 5% 15%;
-        padding: 2%;
+    .wraper {
+        margin: 30px auto;
+        width: 700px;
     }
 }
