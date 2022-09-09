@@ -1,0 +1,14 @@
+.displayedPrice {
+    font-weight: bold;
+    display: inline;
+}
+
+.priceBefore {
+    font-weight: 400;
+    text-decoration: line-through;
+}
+
+.off {
+    font-weight: 400;
+    margin-left: 10px;
+}

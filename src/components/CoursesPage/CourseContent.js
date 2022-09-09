@@ -9,27 +9,32 @@ function CourseContent(props) {
         let minutes = Math.floor((time - hours*3600) / 60);
         return [hours, Math.max(minutes, 0)];
     }
+    const reFormatContentLength = (lectures, time) => {
+        const hours = reFormatTime(time)[0];
+        const minutes = reFormatTime(time)[1];
+        if(hours === 0 && minutes === 0) return `${lectures} lectures`;
+        else if(hours === 0) return `${lectures} lectures • ${minutes}min`;
+        else return `${lectures} lectures • ${hours}hr ${minutes}min`;
+    }
     
     return <>
         <h3 style={{fontWeight: "bold"}}>Course content</h3>
         <br />
-        <p style={{color: "#909091", display: "inline"}}>{sections.length} sections</p>
+        <p style={{fontSize: "14px", display: "inline"}}>{sections.length} sections</p>
         <span> • </span>
-        <p style={{color: "#909091", display: "inline"}}>{numberOfLectures} lectures</p>
+        <p style={{fontSize: "14px", display: "inline"}}>{numberOfLectures} lectures</p>
         <span> • </span>
-        <p style={{color: "#909091", display: "inline"}}>{reFormatTime(estimatedTime)[0]}h {reFormatTime(estimatedTime)[1]}m total length</p>
+        <p style={{fontSize: "14px", display: "inline"}}>{reFormatTime(estimatedTime)[0]}h {reFormatTime(estimatedTime)[1]}m total length</p>
         <Accordion defaultActiveKey={['0']} alwaysOpen>
             {
                 sections.map((val, key) => 
                     <Accordion.Item eventKey={key}>
                         <Accordion.Header>
                             {
-                                <div style={{display: "flex", justifyContent: "space-between", width: "100%"}}>
+                                <div style={{display: "flex", justifyContent: "space-between", width: "95%"}}>
                                     <h4 style={{fontSize: "15px", fontWeight: "bold"}}>{val['title']}</h4>
                                     <p style={{fontSize: "13px", color: "#67696A"}}>
-                                        {val['items'].length} lectures • {''}
-                                        {reFormatTime(val['content_length'])[0] !== 0 ? reFormatTime(val['content_length'])[0]+'hr ' : ''}
-                                        {reFormatTime(val['content_length'])[1] !== 0 ? reFormatTime(val['content_length'])[1]+'min ' : ''}
+                                        {reFormatContentLength(val['items'].length,  val['content_length'])}
                                     </p>
                                 </div>
                             }

@@ -3,7 +3,7 @@ import style from '../../css/CoursesPage/NavBar2.module.css'
 import { IoIosStar } from "react-icons/io";
 
 function NavBar2(props) {
-    const {title, rate, num_reviews, students, price} = props;
+    const {title, rate, num_reviews, students, price, priceOff } = props;
     
     return <header className={style.navBar2}>
             <div className={style.details}>
@@ -17,7 +17,10 @@ function NavBar2(props) {
                 </div>
             </div>
             <div className="col"></div>
-            <h2 className={style.price}>E€{price}</h2>
+            <div style={{display: "flex", flexDirection: "column", padding: "0px"}}>
+                <h2 className={style.price}>E€{(price-price*priceOff/100).toFixed(2)}</h2>
+                <h2 className={style.priceOff}>E€{price}</h2>
+            </div>
             <button className={style.buyNowBtn}><span className={style.buyNowTxt}>Buy now</span></button>
     </header>
 }

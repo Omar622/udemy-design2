@@ -16,6 +16,9 @@
     .price {
         display: none;
     }
+    .priceOff {
+        display: none;
+    }
 }
 
 /* small-3 mode */
@@ -42,6 +45,13 @@
         font-size: 20px;
         color: white;
         display: inline;
+    }
+    .priceOff {
+        font-size: 15px;
+        font-weight: 400;
+        color: #d1d7dc;
+        margin-left: 25px;
+        text-decoration: line-through;
     }
 }
 
@@ -76,5 +86,12 @@
         font-size: 20px;
         color: black;
         display: inline;
+    }
+    .priceOff {
+        font-size: 15px;
+        font-weight: 400;
+        color: #d1d7dc;
+        margin-left: 25px;
+        text-decoration: line-through;
     }
 }

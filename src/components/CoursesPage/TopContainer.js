@@ -1,13 +1,14 @@
 import React from "react";
 import style from "../../css/CoursesPage/TopContainer.module.css";
 import Rate from "../Rate.js";
+import Price from "../Price";
 
 import NewReleasesIcon from '@mui/icons-material/NewReleases';
 import LanguageIcon from '@mui/icons-material/Language';
 import ClosedCaptionIcon from '@mui/icons-material/ClosedCaption';
 
 function TopContainer(props) {
-    const {title, headline, rating, num_reviews, num_subscribers, instructors, last_update_date, image, price } = props;
+    const {title, headline, rating, num_reviews, num_subscribers, instructors, last_update_date, image, price, priceOff } = props;
     
     const reFormatAuthors = (instructors) => {
         let authors = "";
@@ -33,7 +34,7 @@ function TopContainer(props) {
                 <span style={{color: 'white'}}><LanguageIcon style={{width: "18px"}}/> English</span>
                 <span style={{color: 'white'}}><ClosedCaptionIcon style={{width: "18px"}}/> English</span>
             </div>
-            <h3 className={style.price}>E£{price}</h3>
+            <Price className={style.price} price={price} priceOff={priceOff} size={40} color='white' colorOff='#d1d7dc'/>
             <button className={style.addCartBtn}>Add to Cart</button>
             <div className={style.purchase}>
                 <div style={{margin: "10px", textAlign: "center"}}>
