@@ -23,8 +23,9 @@ function CoursesPage() {
                     const courseData = value.data['HomePageCourses'][field]['items'].find((item) => item['id'] === id);
                     return <>
                         <NavBar2 title={courseData['title']} rate={parseFloat(courseData['rating']).toFixed(1)} num_reviews={courseData['num_reviews']} students={courseData['num_subscribers']} price={1000 + Math.floor(Math.random() * 1000)}/>
+
                         <TopContainer title={courseData['title']} headline={courseData['headline']} rating={courseData['rating']}
-                        num_reviews={courseData['num_reviews']} num_subscribers={courseData['num_subscribers']} instructors={courseData['visible_instructors']} last_update_date={courseData['last_update_date']}/>
+                        num_reviews={courseData['num_reviews']} num_subscribers={courseData['num_subscribers']} instructors={courseData['visible_instructors']} last_update_date={courseData['last_update_date']} image={courseData['image_750x422']}/>
                     </>
                 }else {
                     return <Spinner />

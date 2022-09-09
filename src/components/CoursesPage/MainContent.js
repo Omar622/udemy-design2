@@ -36,7 +36,6 @@ function MainContent(props) {
                         <FeedBack rate={parseFloat(courseData["rating"]).toFixed(1)}/>
                         <br />
                         <Reviews reviews={reviews}/>
-                        <br />
                     </>
                 }else {
                     return <Spinner />
