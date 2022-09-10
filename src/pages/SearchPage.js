@@ -1,5 +1,5 @@
 import React from "react";
-import NavBar from "../components/NavBar";
+import NavBar from "../components/Common/NavBar";
 import TapPanel from "../components/HomePage/TapPanel";
 import { useSearchParams } from "react-router-dom";
 

@@ -1,7 +1,7 @@
 import React from "react";
 import style from "../../css/CoursesPage/TopContainer.module.css";
-import Rate from "../Rate.js";
-import Price from "../Price";
+import Rate from "../Common/Rate.js";
+import Price from "../Common/Price";
 
 import NewReleasesIcon from '@mui/icons-material/NewReleases';
 import LanguageIcon from '@mui/icons-material/Language';

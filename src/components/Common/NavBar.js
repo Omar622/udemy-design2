@@ -1,5 +1,5 @@
 import React from "react";
-import style from "../css/NavBar.module.css";
+import style from "../../css/Common/NavBar.module.css";
 
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import SearchRoundedIcon from "@mui/icons-material/SearchRounded";

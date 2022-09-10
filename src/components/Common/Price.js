@@ -1,5 +1,5 @@
 import React from "react";
-import style from "../css/Price.module.css";
+import style from "../../css/Common/Price.module.css";
 
 function Price(props) {
     const { price, priceOff, size, color, colorOff } = props;

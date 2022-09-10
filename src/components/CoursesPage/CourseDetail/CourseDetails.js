@@ -8,8 +8,8 @@ function CourseDetails(props) {
             <br />
             <h2>Requirements</h2>
             <ul>
-                {requirements.map((val) => (
-                    <li>{val}</li>
+                {requirements.map((val, key) => (
+                    <li key={key}>{val}</li>
                 ))}
             </ul>
             <br />
@@ -18,8 +18,8 @@ function CourseDetails(props) {
             <br />
             <h2>Who this course is for:</h2>
             <ul>
-                {for_who_list.map((val) => (
-                    <li style={{ fontSize: "14px" }}>{val}</li>
+                {for_who_list.map((val, key) => (
+                    <li key={key} style={{ fontSize: "14px" }}>{val}</li>
                 ))}
             </ul>
             <br />

@@ -1,6 +1,7 @@
 import React from "react";
-import Rate from "../../Rate";
+import Rate from "../../Common/Rate";
 import style from "../../../css/CoursesPage/Reviews/LikeAvatar.module.css";
+
 import ThumbUpOutlinedIcon from "@mui/icons-material/ThumbUpOutlined";
 import ThumbDownOffAltOutlinedIcon from "@mui/icons-material/ThumbDownOffAltOutlined";
 

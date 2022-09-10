@@ -3,7 +3,7 @@ import { UserConsumer } from "../../contexts/userContext";
 import style from "../../css/CoursesPage/MainContent.module.css";
 import ObjectivesBox from "./ObjectivesBox";
 import CourseContent from "./CourseContent";
-import Spinner from '../Spinner';
+import Spinner from '../Common/Spinner';
 import CourseDetails from "./CourseDetail/CourseDetails";
 import FeedBack from "./FeedBack/Feedback";
 import Reviews from "./Reviews/Reviews";

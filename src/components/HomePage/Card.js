@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import Rate from "../Rate.js";
+import Rate from "../Common/Rate.js";
 import style from "../../css/HomePage/Card.module.css";
 import { Link } from "react-router-dom";
 import { UserConsumer } from "../../contexts/userContext.js";

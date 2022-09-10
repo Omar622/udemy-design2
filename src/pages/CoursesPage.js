@@ -1,11 +1,11 @@
 import React from "react";
 
 import NavBar2 from "../components/CoursesPage/NavBar2";
-import NavBar from "../components/NavBar";
+import NavBar from "../components/Common/NavBar";
 import MainContent from "../components/CoursesPage/MainContent";
 import TopContainer from "../components/CoursesPage/TopContainer";
-import Spinner from "../components/Spinner";
-import Footer from "../components/Footer";
+import Spinner from "../components/Common/Spinner";
+import Footer from "../components/Common/Footer";
 import SideBarContainer from "../components/CoursesPage/SideBarContainer";
 
 import { useLocation } from "react-router-dom";

@@ -50,6 +50,7 @@
         background-color: #1c1d1f;
         width: 100%;
         height: 1050px;
+        min-width: 600px;
         padding: 20px 0px;
         display: flex;
         flex-direction: column;
@@ -59,9 +60,11 @@
     .wraper {
         margin: auto;
         width: 600px;
+        /* max-width: 100%; */
     }
     .image {
         width: 600px;
+        /* max-width: 100%; */
         height: 337px;
         margin: 10px 0px;
     }

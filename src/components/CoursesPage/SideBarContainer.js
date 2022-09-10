@@ -1,6 +1,6 @@
 import React from "react";
 import style from "../../css/CoursesPage/SideBarContainer.module.css";
-import Price from "../Price";
+import Price from "../Common/Price";
 
 import OndemandVideoIcon from "@mui/icons-material/OndemandVideo";
 import DescriptionOutlinedIcon from "@mui/icons-material/DescriptionOutlined";

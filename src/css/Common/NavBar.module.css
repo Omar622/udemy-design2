@@ -1,6 +1,7 @@
 .navBar {
     padding: 0px 20px;
     height: 72px;
+    min-width: 600px;
     display: flex;
     justify-content: space-around;
     align-items: center;

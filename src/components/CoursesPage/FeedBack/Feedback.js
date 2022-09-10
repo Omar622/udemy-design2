@@ -1,5 +1,5 @@
 import React from "react";
-import Rate from "../../Rate";
+import Rate from "../../Common/Rate";
 import Bar from "./Bar";
 
 function FeedBack(props) {

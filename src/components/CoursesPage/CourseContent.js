@@ -27,8 +27,8 @@ function CourseContent(props) {
         <p style={{fontSize: "14px", display: "inline"}}>{reFormatTime(estimatedTime)[0]}h {reFormatTime(estimatedTime)[1]}m total length</p>
         <Accordion defaultActiveKey={['0']} alwaysOpen>
             {
-                sections.map((val, key) => 
-                    <Accordion.Item eventKey={key}>
+                sections.map((val, sectionKey) => 
+                    <Accordion.Item eventKey={sectionKey} key={sectionKey}>
                         <Accordion.Header>
                             {
                                 <div style={{display: "flex", justifyContent: "space-between", width: "95%"}}>
@@ -41,8 +41,8 @@ function CourseContent(props) {
                         </Accordion.Header>
                         <Accordion.Body>
                             {
-                                val['items'].map((item) => 
-                                    <div style={{display: "flex", justifyContent: "space-between", width: "100%"}}>
+                                val['items'].map((item, itemKey) => 
+                                    <div key={itemKey} style={{display: "flex", justifyContent: "space-between", width: "100%"}}>
                                         <h5 style={{fontSize: "14px", color: "#7A7B7C"}}><PlayCircleFilledIcon style={{color: 'black', width: '15px'}}/> {item['title']}</h5>
                                         <div style={{display: "flex", justifyContent: "space-between", width: "20%"}}>
                                             <p style={{display: "inline", color: '#5624D0', textDecoration: 'underline', fontSize: "14px"}}>{item['can_be_previewed'] === true ? 'Preview' : ''}</p>

@@ -4,8 +4,8 @@ function Instructor(props) {
     const { instructors } = props;
     return (
         <>
-            {instructors.map((val) => (
-                <>
+            {instructors.map((val, key) => (
+                <div key={key}>
                     <h3
                         style={{
                             color: "#5624D0",
@@ -96,7 +96,7 @@ function Instructor(props) {
                         ★ OSCP : Offensive Security Certified Professional
                         <br />
                     </p>
-                </>
+                </div>
             ))}
         </>
     );

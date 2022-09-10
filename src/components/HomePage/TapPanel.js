@@ -1,7 +1,7 @@
 import { React } from "react";
 import Card from "./Card.js";
 import style from "../../css/HomePage/TapPanel.module.css";
-import Spinner from "../Spinner.js";
+import Spinner from "../Common/Spinner.js";
 import { UserConsumer } from "../../contexts/userContext.js";
 
 function TapPanel(props) {

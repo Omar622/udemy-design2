@@ -1,5 +1,5 @@
 import React from "react";
-import style from "../css/Footer.module.css";
+import style from "../../css/Common/Footer.module.css";
 
 function Footer() {
     const item = [
@@ -28,7 +28,7 @@ function Footer() {
                     <span style={{ color: "#CEC0FC" }}>Udemy Business</span> to
                     build in-demand career skills.
                 </h2>
-                <div style={{ minWidth: "600px" }}>
+                <div style={{ minWidth: "550px" }}>
                     <img
                         src="https://s.udemycdn.com/partner-logos/v4/nasdaq-light.svg"
                         width="115px"
@@ -70,8 +70,8 @@ function Footer() {
                 }}
             />
             <ul className={style.footerMain} style={{ listStyle: "none" }}>
-                {item.map((val) => (
-                    <li className={style.item}>
+                {item.map((val, key) => (
+                    <li className={style.item} key={key}>
                         <a
                             href="/"
                             style={{ color: "white", textDecoration: "none" }}
