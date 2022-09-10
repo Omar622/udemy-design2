@@ -6,7 +6,7 @@
         position: fixed;
         width: 100%;
         top: 0px;
-        background-color: #1C1D1F;
+        background-color: #1c1d1f;
         z-index: 4;
         display: flex;
     }
@@ -29,7 +29,7 @@
         position: fixed;
         width: 100%;
         bottom: 0px;
-        background-color: #1C1D1F;
+        background-color: #1c1d1f;
         z-index: 4;
         display: flex;
     }
@@ -55,11 +55,10 @@
     }
 }
 
-
 /* phone view */
 @media only screen and (max-width: 780px) {
     .navBar2 {
-        border-top: 1px solid #E3E3E3;
+        border-top: 1px solid #e3e3e3;
         padding: 8px 20px 0px 20px;
         height: 78px;
         position: fixed;
@@ -73,7 +72,7 @@
         display: none;
     }
     .buyNowBtn {
-        background-color: #1C1D1F;
+        background-color: #1c1d1f;
         height: 50px;
         width: 100%;
         font-weight: 600;

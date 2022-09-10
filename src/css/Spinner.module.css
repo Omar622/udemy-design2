@@ -3,7 +3,7 @@
     height: 50px;
     margin: auto;
     border-radius: 50%;
-    border: 5px solid #DED3EA;
+    border: 5px solid #ded3ea;
     border-left: 5px solid transparent;
     animation: Spinner 1.5s linear infinite;
 }

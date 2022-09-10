@@ -5,15 +5,15 @@ import SearchPage from "./pages/SearchPage";
 const Router = [
     {
         element: <HomePage />,
-        path: '/'
+        path: "/",
     },
     {
         element: <CoursesPage />,
-        path: 'courses'
+        path: "courses",
     },
     {
         element: <SearchPage />,
-        path: 'search'
+        path: "search",
     },
 ];
 

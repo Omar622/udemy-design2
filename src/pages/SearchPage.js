@@ -7,10 +7,12 @@ function SearchPage() {
     let [searchParams] = useSearchParams();
     const searchWord = searchParams.get("search");
 
-    return <div>
-        <NavBar />
-        <TapPanel field="python_res" searchWord={searchWord??''} />
-    </div>
+    return (
+        <div>
+            <NavBar />
+            <TapPanel field="python_res" searchWord={searchWord ?? ""} />
+        </div>
+    );
 }
 
 export default SearchPage;

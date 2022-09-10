@@ -1,5 +1,5 @@
 .objectivesBox {
-    border: 1px solid #D1D7DC;
+    border: 1px solid #d1d7dc;
     padding: 4%;
 }
 
@@ -11,8 +11,8 @@
 .tikSign {
     list-style: none;
 }
-  
+
 .tikSign li:before {
-    content: '✓';
+    content: "✓";
     padding-right: 5px;
 }

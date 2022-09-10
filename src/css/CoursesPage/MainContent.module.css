@@ -1,11 +1,9 @@
-
 /* pc mode */
 @media only screen and (min-width: 1080px) {
     .mainContent {
         width: 100%;
         height: 100%;
         padding-right: 35%;
-        
     }
     .wraper {
         margin: auto;
@@ -13,7 +11,6 @@
         padding: 30px 5%;
     }
 }
-
 
 /* small-3 and phone mode */
 @media only screen and (max-width: 1080px) {

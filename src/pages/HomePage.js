@@ -4,11 +4,13 @@ import MainContent from "../components/HomePage/MainContent";
 import Footer from "../components/Footer";
 
 function HomePage() {
-    return <div>
-        <NavBar />
-        <MainContent />
-        <Footer />
-    </div>
+    return (
+        <div>
+            <NavBar />
+            <MainContent />
+            <Footer />
+        </div>
+    );
 }
 
 export default HomePage;
