@@ -7,7 +7,7 @@ import Select from "@mui/material/Select";
 function SearchBar() {
     return (
         <div style={{ display: "flex" }}>
-            <form style={{ border: "1px solid black", width: "422px" }}>
+            <form style={{ border: "1px solid black", width: "423px" }}>
                 <input
                     type={"text"}
                     name="search"
@@ -15,7 +15,7 @@ function SearchBar() {
                     style={{
                         border: "none",
                         padding: "0px 20px",
-                        height: "38px",
+                        height: "36px",
                         width: "380px",
                     }}
                 />

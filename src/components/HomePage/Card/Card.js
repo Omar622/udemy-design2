@@ -1,8 +1,9 @@
 import React, { useMemo } from "react";
-import Rate from "../Common/Rate.js";
-import style from "../../css/HomePage/Card.module.css";
+import Rate from "../../Common/Rate.js";
+
+import style from "../../../css/HomePage/Card/Card.module.css";
 import { Link } from "react-router-dom";
-import { UserConsumer } from "../../contexts/userContext.js";
+import { UserConsumer } from "../../../contexts/userContext.js";
 
 function Card(props) {
     const { field, id } = props;
@@ -28,7 +29,10 @@ function Card(props) {
                         <Link
                             to="/courses"
                             state={{ id: id, field: field }}
-                            style={{ textDecoration: "none", color: "black" }}
+                            style={{
+                                textDecoration: "none",
+                                color: "black",
+                            }}
                         >
                             <article className={style.coursesGridItem}>
                                 <img

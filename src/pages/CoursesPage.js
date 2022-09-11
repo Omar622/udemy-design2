@@ -6,7 +6,7 @@ import MainContent from "../components/CoursesPage/MainContent";
 import TopContainer from "../components/CoursesPage/TopContainer";
 import Spinner from "../components/Common/Spinner";
 import Footer from "../components/Common/Footer";
-import SideBarContainer from "../components/CoursesPage/SideBarContainer";
+import GenerateSideBar from "../components/CoursesPage/SideBar/GenerateSideBar";
 
 import { useLocation } from "react-router-dom";
 import { UserConsumer } from "../contexts/userContext";
@@ -32,7 +32,7 @@ function CoursesPage() {
                             ]["estimated_content_length_in_seconds"];
                         return (
                             <>
-                                <SideBarContainer
+                                <GenerateSideBar
                                     image={courseData["image_750x422"]}
                                     time={time}
                                     price={dummyPrice}

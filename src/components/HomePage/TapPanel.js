@@ -1,5 +1,5 @@
 import { React } from "react";
-import Card from "./Card.js";
+import CardWithHover from "./Card/CardWithHover.js";
 import style from "../../css/HomePage/TapPanel.module.css";
 import Spinner from "../Common/Spinner.js";
 import { UserConsumer } from "../../contexts/userContext.js";
@@ -56,13 +56,13 @@ function TapPanel(props) {
                                                 )
                                         )
                                             return (
-                                                <Card
+                                                <CardWithHover
                                                     field={field}
                                                     id={element["id"]}
                                                     key={element["id"]}
                                                 />
                                             );
-                                        else return <></>;
+                                        else return <div key={element["id"]}></div>;
                                     })}
                                 </section>
                             </div>

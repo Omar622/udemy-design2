@@ -1,0 +1,17 @@
+.tikSign {
+    list-style: none;
+}
+
+.tikSign li:before {
+    content: "✓";
+    padding-right: 5px;
+}
+
+.addToCartBtn {
+    width: 100%;
+    height: 50px;
+    background-color: #a435f0;
+    color: white;
+    font-weight: bold;
+    border: none;
+}

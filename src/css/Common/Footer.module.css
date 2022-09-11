@@ -1,7 +1,7 @@
 .footer {
+    position: absolute;
     height: 590px;
     width: 100%;
-    min-width: 600px;
     background-color: #1c1d1f;
 }
 
@@ -18,9 +18,9 @@
         margin: 15px;
     }
     .footer {
+        position: absolute;
         height: 810px;
         width: 100%;
-        min-width: 600px;
         background-color: #1c1d1f;
     }
 }

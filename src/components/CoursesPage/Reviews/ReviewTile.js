@@ -1,12 +1,35 @@
 import React from "react";
 import Rate from "../../Common/Rate";
-import style from "../../../css/CoursesPage/Reviews/LikeAvatar.module.css";
 
-import ThumbUpOutlinedIcon from "@mui/icons-material/ThumbUpOutlined";
-import ThumbDownOffAltOutlinedIcon from "@mui/icons-material/ThumbDownOffAltOutlined";
+import IconButton from "@mui/material/IconButton";
+import ThumbUpOffAltIcon from "@mui/icons-material/ThumbUpOffAlt";
+import ThumbUpAltIcon from "@mui/icons-material/ThumbUpAlt";
+import ThumbDownOffAltIcon from "@mui/icons-material/ThumbDownOffAlt";
+import ThumbDownAltIcon from "@mui/icons-material/ThumbDownAlt";
+import { useState } from "react";
 
 function ReviewTile(props) {
     const { content, rating, display_name, time_since, image } = props;
+
+    const [isLiked, setIsLiked] = useState(false);
+    const [isDisLiked, setIsDisLiked] = useState(false);
+    const toggleLike = () => {
+        if (isLiked) {
+            setIsLiked(false);
+        } else {
+            setIsLiked(true);
+            setIsDisLiked(false);
+        }
+    };
+    const toggleDisLike = () => {
+        if (isDisLiked) {
+            setIsDisLiked(false);
+        } else {
+            setIsDisLiked(true);
+            setIsLiked(false);
+        }
+    };
+
     return (
         <>
             <div style={{ display: "flex" }}>
@@ -33,23 +56,32 @@ function ReviewTile(props) {
                         Was his review helpful?
                     </p>
                     <div style={{ display: "flex" }}>
-                        <div className={style.likeAvatar}>
-                            <ThumbUpOutlinedIcon style={{ width: "20px" }} />
-                        </div>
-                        <div className={style.likeAvatar}>
-                            <ThumbDownOffAltOutlinedIcon
-                                style={{ width: "20px" }}
-                            />
-                        </div>
-                        <p
+                        <IconButton color="primary" onClick={toggleLike}>
+                            {isLiked ? (
+                                <ThumbUpAltIcon style={{ color: "black" }} />
+                            ) : (
+                                <ThumbUpOffAltIcon style={{ color: "black" }} />
+                            )}
+                        </IconButton>
+                        <IconButton color="primary" onClick={toggleDisLike}>
+                            {isDisLiked ? (
+                                <ThumbDownAltIcon style={{ color: "black" }} />
+                            ) : (
+                                <ThumbDownOffAltIcon
+                                    style={{ color: "black" }}
+                                />
+                            )}
+                        </IconButton>
+                        <a
+                            href="/"
                             style={{
                                 fontSize: "12px",
-                                textDecoration: "underline",
+                                color: "black",
                                 margin: "auto 0px",
                             }}
                         >
                             Report
-                        </p>
+                        </a>
                     </div>
                 </div>
             </div>

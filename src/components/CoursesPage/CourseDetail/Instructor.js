@@ -1,4 +1,5 @@
 import React from "react";
+import ShowMore from "../../Common/ShowMore";
 
 function Instructor(props) {
     const { instructors } = props;
@@ -36,7 +37,7 @@ function Instructor(props) {
                     </div>
                     <br />
                     {/* hard coded data */}
-                    <p>
+                    <ShowMore>
                         Winner of the AI "
                         <strong>
                             Cyber Security Educator of the Year 2020
@@ -95,7 +96,7 @@ function Instructor(props) {
                         <br />
                         ★ OSCP : Offensive Security Certified Professional
                         <br />
-                    </p>
+                    </ShowMore>
                 </div>
             ))}
         </>
