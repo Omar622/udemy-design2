@@ -39,7 +39,7 @@ function TabsContainer() {
                     );
                 })}
             </div>
-            <TapContent field={field} searchWord={""} />
+            <TapContent field={field}/>
         </>
     );
 }

@@ -5,7 +5,7 @@ import Spinner from "../../Common/Spinner.js";
 import { UserConsumer } from "../../../contexts/userContext.js";
 
 function TabContent(props) {
-    const { field, searchWord } = props;
+    const { field } = props;
 
     return (
         <>
@@ -40,21 +40,13 @@ function TabContent(props) {
                                     {value.data["HomePageCourses"][field][
                                         "items"
                                     ].map((element) => {
-                                        if (
-                                            String(element["title"])
-                                                .toLowerCase()
-                                                .includes(
-                                                    searchWord.toLowerCase()
-                                                )
-                                        )
-                                            return (
-                                                <CardWithHover
-                                                    field={field}
-                                                    id={element["id"]}
-                                                    key={element["id"]}
-                                                />
-                                            );
-                                        else return <div key={element["id"]}></div>;
+                                        return (
+                                            <CardWithHover
+                                                field={field}
+                                                id={element["id"]}
+                                                key={element["id"]}
+                                            />
+                                        );
                                     })}
                                 </section>
                             </div>

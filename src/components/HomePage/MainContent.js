@@ -1,5 +1,4 @@
 import React from "react";
-// import TapContent from "./TapsContainer/TapContent.js";
 import Banner from "./Banner.js";
 import TabsContainer from "./TabsContainer/TabsContainer.js";
 import style from "../../css/HomePage/MainContent.module.css";
