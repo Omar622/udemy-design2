@@ -1,0 +1,6 @@
+.gridItem {
+    display: inline-grid;
+    margin: 12px;
+    width: 330px;
+    height: 330px;
+}

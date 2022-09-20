@@ -1,6 +1,7 @@
 import React from "react";
 import Banner from "./Banner.js";
 import TabsContainer from "./TabsContainer/TabsContainer.js";
+import Categories from "./Categories.js";
 import style from "../../css/HomePage/MainContent.module.css";
 
 function MainContent() {
@@ -18,6 +19,10 @@ function MainContent() {
             </header>
             <br />
             <TabsContainer />
+            <br />
+            <Categories />
+            <br />
+            <br />
         </div>
     );
 }
