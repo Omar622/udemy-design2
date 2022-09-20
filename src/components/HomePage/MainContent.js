@@ -7,6 +7,8 @@ function MainContent() {
     return (
         <div className={style.mainContent}>
             <Banner />
+            <br />
+            <br />
             <header style={{ marginLeft: "24px" }}>
                 <h1>A broad selection of courses</h1>
                 <span style={{ fontSize: "24px" }}>
