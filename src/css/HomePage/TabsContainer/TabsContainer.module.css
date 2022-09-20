@@ -1,0 +1,11 @@
+.tabsStyle{
+    padding-left: 25px;
+}
+
+.transparentButton {
+    border: none;
+    background-color: white;
+    font-size: 18px;
+    font-weight: bold;
+    color: #6a6f73;
+}

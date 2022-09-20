@@ -1,6 +1,6 @@
 import React from "react";
 import NavBar from "../components/Common/NavBar";
-import TapPanel from "../components/HomePage/TapPanel";
+import TabContent from "../components/HomePage/TabsContainer/TabContent.js";
 import { useSearchParams } from "react-router-dom";
 
 function SearchPage() {
@@ -10,7 +10,7 @@ function SearchPage() {
     return (
         <div>
             <NavBar />
-            <TapPanel field="python_res" searchWord={searchWord ?? ""} />
+            <TabContent field="python_res" searchWord={searchWord ?? ""} />
         </div>
     );
 }

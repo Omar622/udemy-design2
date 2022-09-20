@@ -1,27 +1,19 @@
 import { React } from "react";
-import CardWithHover from "./Card/CardWithHover.js";
-import style from "../../css/HomePage/TapPanel.module.css";
-import Spinner from "../Common/Spinner.js";
-import { UserConsumer } from "../../contexts/userContext.js";
+import CardWithHover from "../Card/CardWithHover.js";
+import style from "../../../css/HomePage/TabsContainer/TabContent.module.css";
+import Spinner from "../../Common/Spinner.js";
+import { UserConsumer } from "../../../contexts/userContext.js";
 
-function TapPanel(props) {
+function TabContent(props) {
     const { field, searchWord } = props;
 
     return (
         <>
-            <header style={{ marginLeft: "24px" }}>
-                <h1>A broad selection of courses</h1>
-                <span style={{ fontSize: "24px" }}>
-                    Choose from 204,000 online video courses with new additions
-                    published every month
-                </span>
-            </header>
-            <br />
             <UserConsumer>
                 {(value) => {
                     if (value.status === "fetched") {
                         return (
-                            <div className={style.tapPanel}>
+                            <div className={style.tabContent}>
                                 <header>
                                     <h2>
                                         {
@@ -76,4 +68,4 @@ function TapPanel(props) {
     );
 }
 
-export default TapPanel;
+export default TabContent;
