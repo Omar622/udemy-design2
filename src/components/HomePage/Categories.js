@@ -46,8 +46,9 @@ function Categories() {
                         <img
                             src={value[1]}
                             alt="category"
-                            width="300px"
-                            height="300px"
+                            className={style.image}
+                            // width="300px"
+                            // height="300px"
                         />
                         <span style={{ fontWeight: "bold" }}>{value[0]}</span>
                     </div>
