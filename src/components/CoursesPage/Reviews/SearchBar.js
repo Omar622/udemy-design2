@@ -5,9 +5,15 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 
 function SearchBar() {
+    const handleSubmit = (event) => {
+        event.preventDefault();
+    };
     return (
         <div style={{ display: "flex" }}>
-            <form style={{ border: "1px solid black", minWidth: "423px" }}>
+            <form
+                style={{ border: "1px solid black", minWidth: "423px" }}
+                onSubmit={handleSubmit}
+            >
                 <input
                     type={"text"}
                     name="search"

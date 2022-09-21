@@ -5,6 +5,8 @@ import { useState, useEffect } from "react";
 import { UserProvider } from "./contexts/userContext";
 import { useCallback } from "react";
 
+// TO DO: carousel, sidbar container, popover
+
 function App() {
     const Routes = () => useRoutes(Router);
 
