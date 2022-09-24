@@ -43,7 +43,7 @@ function Card(props) {
                                         ]
                                     }
                                     height="150px"
-                                    width="260px"
+                                    width="259px"
                                 ></img>
                                 <header style={{ padding_left: "12px" }}>
                                     <h3

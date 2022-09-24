@@ -6,7 +6,7 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 
 import { useState } from "react";
-import { UncontrolledPopover, PopoverBody } from "reactstrap";
+import { Popover, PopoverBody } from "reactstrap";
 import { UserConsumer } from "../../../contexts/userContext";
 
 function CardWithHover(props) {
@@ -35,13 +35,14 @@ function CardWithHover(props) {
                         >
                             <Card field={field} id={id} />
                         </div>
-                        <UncontrolledPopover
+                        <Popover
                             placement="right"
                             isOpen={isPopOver}
                             target={"popOver" + String(id)}
                             toggle={toggle}
+                            
                         >
-                            <PopoverBody>
+                            <PopoverBody >
                                 <div
                                     onMouseEnter={onHover}
                                     onMouseLeave={onHoverLeave}
@@ -118,7 +119,7 @@ function CardWithHover(props) {
                                     </div>
                                 </div>
                             </PopoverBody>
-                        </UncontrolledPopover>
+                        </Popover>
                     </>
                 );
             }}

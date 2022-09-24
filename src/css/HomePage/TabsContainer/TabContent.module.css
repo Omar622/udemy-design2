@@ -16,8 +16,14 @@
 }
 
 .coursesGrid {
-    margin-top: 32px;
-    display: flex;
+    /* margin-top: 32px; */
+    /* display: flex;
     justify-content: stretch;
-    flex-wrap: wrap;
+    flex-wrap: wrap; */
+    position: relative;
+
+    margin-top: 64px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
 }
