@@ -1,0 +1,11 @@
+.coursesGridItem {
+    border: 1px solid #d1d7dc;
+    width: 260px;
+    height: 280px;
+    margin: 5px;
+}
+
+.couresGridItemDescription {
+    font-size: 12px;
+    margin: 5px;
+}

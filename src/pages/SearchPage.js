@@ -1,16 +1,18 @@
 import React from "react";
-import NavBar from "../components/js/NavBar";
-import TapPanel from "../components/js/TapPanel";
+import NavBar from "../components/Common/NavBar";
 import { useSearchParams } from "react-router-dom";
+import MainContent from "../components/SearchPage/MainContent";
 
 function SearchPage() {
-    let [searchParams] = useSearchParams();
+    const [searchParams] = useSearchParams();
     const searchWord = searchParams.get("search");
 
-    return <div>
-        <NavBar />
-        <TapPanel field="python_res" searchWord={searchWord??''} />
-    </div>
+    return (
+        <div>
+            <NavBar />
+            <MainContent searchWord={searchWord}/>
+        </div>
+    );
 }
 
 export default SearchPage;

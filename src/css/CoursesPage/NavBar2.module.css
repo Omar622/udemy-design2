@@ -1,0 +1,96 @@
+/* pc view */
+@media only screen and (min-width: 1080px) {
+    .navBar2 {
+        padding: 8px 20px 0px 15px;
+        height: 78px;
+        position: fixed;
+        width: 100%;
+        top: 0px;
+        background-color: #1c1d1f;
+        z-index: 4;
+        display: flex;
+    }
+    .buyNowBtn {
+        display: none;
+    }
+    .price {
+        display: none;
+    }
+    .priceOff {
+        display: none;
+    }
+}
+
+/* small-3 mode */
+@media only screen and (max-width: 1080px) {
+    .navBar2 {
+        padding: 8px 20px 0px 20px;
+        height: 78px;
+        position: fixed;
+        width: 100%;
+        bottom: 0px;
+        background-color: #1c1d1f;
+        z-index: 4;
+        display: flex;
+    }
+    .buyNowBtn {
+        border: 1px solid black;
+        background-color: white;
+        height: 50px;
+        width: 85px;
+        font-weight: 600;
+    }
+    .price {
+        margin: 10px 5px;
+        font-size: 20px;
+        color: white;
+        display: inline;
+    }
+    .priceOff {
+        font-size: 15px;
+        font-weight: 400;
+        color: #d1d7dc;
+        margin-left: 25px;
+        text-decoration: line-through;
+    }
+}
+
+/* phone view */
+@media only screen and (max-width: 600px) {
+    .navBar2 {
+        border-top: 1px solid #e3e3e3;
+        padding: 8px 20px 0px 20px;
+        height: 78px;
+        position: fixed;
+        width: 100%;
+        bottom: 0px;
+        background-color: white;
+        z-index: 4;
+        display: flex;
+    }
+    .details {
+        display: none;
+    }
+    .buyNowBtn {
+        background-color: #1c1d1f;
+        height: 50px;
+        width: 100%;
+        font-weight: 600;
+    }
+    .buyNowTxt {
+        color: white;
+    }
+    .price {
+        margin: 10px 5px;
+        font-size: 20px;
+        color: black;
+        display: inline;
+    }
+    .priceOff {
+        font-size: 15px;
+        font-weight: 400;
+        color: #7c8083;
+        margin-left: 25px;
+        text-decoration: line-through;
+    }
+}

@@ -1,0 +1,18 @@
+.objectivesBox {
+    border: 1px solid #d1d7dc;
+    padding: 4%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.tikSign {
+    list-style: none;
+}
+
+.tikSign li:before {
+    content: "✓";
+    padding-right: 5px;
+}

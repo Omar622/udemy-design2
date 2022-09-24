@@ -1,0 +1,97 @@
+.navBar {
+    padding: 0px 20px;
+    height: 72px;
+    min-width: 600px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    position: relative;
+    z-index: 5;
+    box-shadow: inset 0 0em 0em rgba(0, 0, 0, 0.1),
+        0em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
+
+.navBarItem {
+    margin: 0px 8px;
+    padding: 8px 0px;
+    position: relative;
+    z-index: 5;
+}
+
+/* buttons */
+.smWhiteBlackButton {
+    background-color: white;
+    border: 1px solid black;
+    height: 40px;
+    width: 40px;
+}
+.mdBlackWhiteButton {
+    border: none;
+    color: white;
+    background-color: black;
+    font-weight: 900;
+    font-size: 14px;
+    height: 40px;
+    width: 80px;
+}
+.mdWhiteBlackButton {
+    border: 1px solid black;
+    background-color: white;
+    height: 40px;
+    width: 80px;
+}
+.lgWhiteBlackButton {
+    border: 1px solid black;
+    background-color: white;
+    height: 40px;
+    width: 150px;
+    font-weight: 800;
+}
+.transparentButton {
+    border: none;
+    background-color: white;
+}
+
+/* pc view */
+@media only screen and (min-width: 780px) {
+    .phoneView {
+        display: none;
+    }
+}
+
+/* phone view */
+@media only screen and (max-width: 780px) {
+    .pcView {
+        display: none;
+    }
+}
+
+/* small-3 mode */
+@media only screen and (max-width: 1080px) {
+    .sm3 {
+        display: none;
+    }
+}
+
+/* small-2 mode */
+@media only screen and (max-width: 920px) {
+    .sm2 {
+        display: none;
+    }
+}
+
+/* search in navigation bar */
+.navBarInput {
+    display: inline;
+    padding: auto;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    max-width: 1117px;
+}
+.navBarInputText {
+    height: 46px;
+    border-radius: 25px;
+    width: 100%;
+}

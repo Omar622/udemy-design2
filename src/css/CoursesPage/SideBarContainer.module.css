@@ -1,0 +1,60 @@
+.containerAbsolute {
+    border: 1px solid #eeeeee;
+    background-color: white;
+    width: 340px;
+    position: absolute;
+    left: 65%;
+    box-shadow: inset 0 0em 0em rgba(0, 0, 0, 0.1),
+        0em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
+
+.containerFixed {
+    border: 1px solid #eeeeee;
+    background-color: white;
+    width: 340px;
+    position: fixed;
+    z-index: 6;
+    top: 20px;
+    left: 65%;
+    box-shadow: inset 0 0em 0em rgba(0, 0, 0, 0.1),
+        0em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
+
+.addCartBtn {
+    height: 48px;
+    width: 100%;
+    border: none;
+    color: white;
+    font-weight: bold;
+    background-color: #a435f0;
+    margin: 3px 0px;
+}
+
+.buyNowBtn {
+    height: 48px;
+    width: 100%;
+    border: 1px solid black;
+    color: black;
+    font-weight: 700;
+    background-color: white;
+    margin: 3px 0px;
+}
+
+.tryUdemyBusinessBtn {
+    height: 40px;
+    width: 100%;
+    border: 1px solid black;
+    color: black;
+    font-weight: 600;
+    background-color: white;
+}
+
+/* small-3 mode */
+@media only screen and (max-width: 1080px) {
+    .containerAbsolute {
+        display: none;
+    }
+    .containerFixed {
+        display: none;
+    }
+}
